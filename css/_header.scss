@@ -1,0 +1,122 @@
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-bottom: 5rem;
+}
+hr{
+    border: 0;
+    border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+}
+.navbar{
+    padding: 1.75rem 3.5rem;
+    font-family: 'Poppins';
+
+    #logo{
+        > a{
+            color: whitesmoke;
+        }
+        font-size: 1.75rem;
+        font-weight: 200;
+        letter-spacing: 1.2px;
+    }
+    &-links{
+        font-size: 0.9rem;
+        > a{
+            color: whitesmoke;
+            transition: all 300ms ease-in-out;
+            &:hover{
+                color: $mainColor;
+            }
+            &:not(:last-child){
+                margin: 0 2.5rem;
+            }
+            &:last-child{
+                font-size: 1rem;
+                color: $black;
+            }
+        }
+    }
+    &-btn{
+        padding: 0.5rem 1.25rem;
+        border-radius: 25px;
+        background-color: $mainColor;
+        font-weight: 700;
+        transition: all 300ms ease-in-out;
+        &:hover{
+            background-color: $linkColor;
+        }
+    }
+}
+.header-text{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+    color: whitesmoke;
+    text-align: center;
+
+    .subtitle{
+        margin-bottom: 1rem;
+    }
+    .title{
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.5rem;
+    }
+    .slogan{
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+}
+.header-booking{
+    align-items: flex-end;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    label{
+        color: #a2a2a2;
+    }
+    input{
+        font-family: 'Raleway';
+        font-size: 0.75rem;
+        color: whitesmoke;
+        margin-top: 0.5rem;
+        display: block;
+        border: 0;
+        border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+        background-color: inherit;
+    }
+    > div{
+        margin-right: 3rem;
+    }
+    #adult{
+        padding: 0.5rem;
+        border: 0.5px solid rgba(199, 199, 199, 0.5);
+    }
+    .navbar-btn{
+        background: none;
+        background-color: white;
+        border: 0;
+        border-radius: 0;
+    }
+}
+
+.rooms{
+    &-tiles{
+        grid-template-columns: repeat(4, 1fr);
+        > .flex{
+            flex-direction: column;
+            > img{
+                height: 300px;
+                width: 300px;
+            }
+        }
+    }
+}

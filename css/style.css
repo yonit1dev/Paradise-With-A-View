@@ -1,0 +1,211 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../assets/hero.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-bottom: 5rem;
+}
+
+hr {
+  border: 0;
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+}
+
+.navbar {
+  padding: 1.75rem 3.5rem;
+  font-family: 'Poppins';
+}
+
+.navbar #logo {
+  font-size: 1.75rem;
+  font-weight: 200;
+  letter-spacing: 1.2px;
+}
+
+.navbar #logo > a {
+  color: whitesmoke;
+}
+
+.navbar-links {
+  font-size: 0.9rem;
+}
+
+.navbar-links > a {
+  color: whitesmoke;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar-links > a:hover {
+  color: #ffb647;
+}
+
+.navbar-links > a:not(:last-child) {
+  margin: 0 2.5rem;
+}
+
+.navbar-links > a:last-child {
+  font-size: 1rem;
+  color: #171c26;
+}
+
+.navbar-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  background-color: #ffb647;
+  font-weight: 700;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar-btn:hover {
+  background-color: #09c0fa;
+}
+
+.header-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 5rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.header-text .subtitle {
+  margin-bottom: 1rem;
+}
+
+.header-text .title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+}
+
+.header-text .slogan {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.header-booking {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: whitesmoke;
+}
+
+.header-booking label {
+  color: #a2a2a2;
+}
+
+.header-booking input {
+  font-family: 'Raleway';
+  font-size: 0.75rem;
+  color: whitesmoke;
+  margin-top: 0.5rem;
+  display: block;
+  border: 0;
+  border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+  background-color: inherit;
+}
+
+.header-booking > div {
+  margin-right: 3rem;
+}
+
+.header-booking #adult {
+  padding: 0.5rem;
+  border: 0.5px solid rgba(199, 199, 199, 0.5);
+}
+
+.header-booking .navbar-btn {
+  background: none;
+  background-color: white;
+  border: 0;
+  border-radius: 0;
+}
+
+.rooms-tiles {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.rooms-tiles > .flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rooms-tiles > .flex > img {
+  height: 300px;
+  width: 300px;
+}
+/*# sourceMappingURL=style.css.map */

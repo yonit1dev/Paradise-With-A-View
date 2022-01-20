@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Paradise With a View</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar flex flex-jc-sb flex-ai-c">
+            <div id="logo">
+                <a href="#">
+                    Paradise
+                </a>
+            </div>
+            <div class="navbar-links">
+                <a href="">Rooms</a>
+                <a href="">About</a>
+                <a href="">Facilites</a>
+                <a href="">Contact</a>
+                <a class="navbar-btn" href="">Book Now</a>
+            </div>
+        </nav>
+        <hr>
+
+        <section class="header-text">
+            <div class="subtitle">
+                Resort & Hotel
+            </div>
+            <div class="title">
+                Paradise With A View
+            </div>
+            <div class="slogan">
+                Hospitality at its best
+            </div>
+        </section>
+        <section class="header-booking flex flex-jc-sb">
+            <div class="check-in">
+                <label for="checkin">Check in Date <sup>*</sup></label>
+                <input type="date" name="checkin" id="" required>
+            </div>
+            <div class="check-out">
+                <label for="checkout">Check out Date <sup>*</sup></label>
+                <input type="date" name="checkout" id="" required>
+            </div>
+            <div class="people">
+                <input type="number" name="" id="adult" placeholder="Adult">
+            </div>
+            <div class="people">
+                <input type="number" name="" id="child" placeholder="Children">
+            </div>
+            <div class="search">
+                <button type="submit" class="navbar-btn">Search</button>
+            </div>
+        </section>
+    </header>
+
+    <section class="rooms">
+        <div class="rooms-tiles grid">
+            <div class="flex flex-ai-c">
+                <img src="assets/room1.jpeg" alt="">
+                <div class="room-title">Single Deluxe</div>
+                <div class="room-price">599</div>
+            </div>
+            <div class="flex flex-ai-c">
+                <img src="assets/room2.jpeg" alt="">
+                <div class="room-title">Double Deluxe</div>
+                <div class="room-price">799</div>
+            </div>
+            <div class="flex flex-ai-c">
+                <img src="assets/room3.jpeg" alt="">
+                <div class="room-title">Family Deluxe</div>
+                <div class="room-price">899</div>
+            </div>
+            <div class="flex flex-ai-c">
+                <img src="assets/room5.jpeg" alt="">
+                <div class="room-title">Penthouse</div>
+                <div class="room-price">1599</div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
