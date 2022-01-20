@@ -27,7 +27,7 @@ hr{
             color: whitesmoke;
             transition: all 300ms ease-in-out;
             &:hover{
-                color: $mainColor;
+                color: $linkColor;
             }
             &:not(:last-child){
                 margin: 0 2.5rem;
@@ -51,7 +51,7 @@ hr{
 }
 .header-text{
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 5rem;
@@ -59,24 +59,29 @@ hr{
     text-align: center;
 
     .subtitle{
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-bottom: 2.5rem;
     }
     .title{
+        font-family: 'Montserrat';
         font-size: 3.5rem;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 1.5rem;
+        letter-spacing: 1.8px;
+        margin-bottom: 2rem;
     }
     .slogan{
+        font-weight: 700;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
         margin-bottom: 0.5rem;
     }
 }
 .header-booking{
-    align-items: flex-end;
+    align-items: center;
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
@@ -100,11 +105,21 @@ hr{
         padding: 0.5rem;
         border: 0.5px solid rgba(199, 199, 199, 0.5);
     }
-    .navbar-btn{
-        background: none;
-        background-color: white;
-        border: 0;
-        border-radius: 0;
+    #child{
+        padding: 0.5rem;
+        border: 0.5px solid rgba(199, 199, 199, 0.5);
+    }
+    .search-btn{
+        > a{
+            color: black;
+            background-color: whitesmoke;
+            // padding: 0.5rem 1.25rem;
+            font-weight: 700;
+            transition: all 300ms ease-in-out;
+            &:hover{
+                background-color: $mainColor;
+            }
+        }
     }
 }
 
@@ -113,10 +128,29 @@ hr{
         grid-template-columns: repeat(4, 1fr);
         > .flex{
             flex-direction: column;
+            transition: all 300ms ease-in-out;
             > img{
                 height: 300px;
                 width: 300px;
+                margin-bottom: 1.5rem;
             }
+            &:hover{
+                transform: scale(1.1);
+            }
+            .room-title{
+                margin-bottom: 0.5rem;
+                font-size: 1.25rem;
+                font-weight: 200;
+                letter-spacing: 1.2px;
+            }
+            .room-price{
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                > span{
+                    margin-right: 0.25rem;
+                }
+            }
+            
         }
     }
 }
