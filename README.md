@@ -5,3 +5,5 @@ Information collected from the webarchive(Paradise With a View is no longer runn
 The main goal is to create a mobile friendly, responsive website. Certain screen design patterns for better information conveyance will be implemented. Clear and concise navigation with a structured hierarchy of contents will be developed. 
 
 This repository is part of a Human-Computer Interaction UI Project. 
+
+Link to final design: https://yonit1dev.github.io/Paradise-With-A-View/
