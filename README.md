@@ -6,4 +6,4 @@ The main goal is to create a mobile friendly, responsive website. Certain screen
 
 This repository is part of a Human-Computer Interaction UI Project. 
 
-Link to final design: yonit1dev.github.io/Paradise-With-A-View/
+Link to final design: https://yonit1dev.github.io/Paradise-With-A-View/
