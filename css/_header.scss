@@ -108,6 +108,7 @@ hr{
         }
     }
 }
+
 .header-text{
     position: absolute;
     top: 30%;
@@ -137,6 +138,7 @@ hr{
         margin-bottom: 0.5rem;
     }
 }
+
 .header-booking{
     align-items: center;
     position: absolute;
@@ -253,6 +255,7 @@ hr{
         }
 
     }
+
     &-tiles{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -261,6 +264,10 @@ hr{
             margin-bottom: 3rem;
         }
         .grid{
+            @include breakpoints-down(small){
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
             grid-template-columns: repeat(3, 1fr);
             > .flex{
                 flex-direction: column;
