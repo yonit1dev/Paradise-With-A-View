@@ -12,20 +12,32 @@
     <title>Paradise With a View</title>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="overlay">
+
+        </div>
+
         <nav class="navbar flex flex-jc-sb flex-ai-c">
             <div id="logo">
                 <a href="#">
                     Paradise
                 </a>
             </div>
-            <div class="navbar-links">
+
+            <!-- Mobile Menu Toggle Button -->
+            <a href="#" id="hamburger" class="header-dropdown hide-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="hide-mobile navbar-links">
                 <a href="">Home</a>
                 <a href="">Rooms</a>
                 <a href="">Facilites</a>
                 <a href="">Contact</a>
-                <a class="navbar-btn" href="">Book Now</a>
             </div>
+            <a class="navbar-btn hide-small" href="">Book Now</a>
         </nav>
         <hr>
 
@@ -40,48 +52,74 @@
                 Hospitality at its best
             </div>
         </section>
-        <section class="header-booking flex flex-jc-sb">
-            <div class="check-in">
-                <label for="checkin">Check in Date <sup>*</sup></label>
-                <input type="date" name="checkin" id="" required>
+        <section class="header-booking">
+            <div class="grid grid-ai-c">
+                <div id="dates" class="flex">
+                    <div class="check-in">
+                        <label for="checkin">Check in Date <sup>*</sup></label>
+                        <input type="date" name="checkin" id="" required>
+                    </div>
+                    <div class="check-out">
+                        <label for="checkout">Check out Date <sup>*</sup></label>
+                        <input type="date" name="checkout" id="" required>
+                    </div>
+                </div>
+                <div class="flex flex-jc-sb flex-ai-c">
+                    <div class="people">
+                        <input type="number" name="" id="adult" placeholder="Adult">
+                    </div>
+                    <div class="people">
+                        <input type="number" name="" id="child" placeholder="Children">
+                    </div>
+                    <div class="search-btn">
+                        <a href="">Search</a>
+                    </div>
+                </div>
             </div>
-            <div class="check-out">
-                <label for="checkout">Check out Date <sup>*</sup></label>
-                <input type="date" name="checkout" id="" required>
-            </div>
-            <div class="people">
-                <input type="number" name="" id="adult" placeholder="Adult">
-            </div>
-            <div class="people">
-                <input type="number" name="" id="child" placeholder="Children">
-            </div>
-            <div class="search-btn">
-                <a href="">Search</a>
-            </div>
+            
         </section>
     </header>
 
     <section class="rooms">
+        <div class="rooms-title">
+            Our Accomodations
+            <p>Best in class Accomodation. Best in class Service.</p>
+            <hr>
+        </div>
         <div class="rooms-tiles grid">
-            <div class="flex flex-ai-c">
-                <img src="assets/room1.jpeg" alt="">
-                <div class="room-title">Single Deluxe</div>
-                <div class="room-price"><span>ETB</span>599</div>
+            <div class="rooms-top grid">
+                <div class="flex flex-ai-c">
+                    <img src="assets/room1.jpeg" alt="">
+                    <div class="room-title">Single Deluxe</div>
+                    <div class="room-price"><span>ETB</span>599</div>
+                </div>
+                <div class="flex flex-ai-c">
+                    <img src="assets/room2.jpeg" alt="">
+                    <div class="room-title">Double Deluxe</div>
+                    <div class="room-price"><span>ETB</span>799</div>
+                </div>
+                <div class="flex flex-ai-c">
+                    <img src="assets/room3.jpeg" alt="">
+                    <div class="room-title">Family Deluxe</div>
+                    <div class="room-price"><span>ETB</span>899</div>
+                </div>
             </div>
-            <div class="flex flex-ai-c">
-                <img src="assets/room2.jpeg" alt="">
-                <div class="room-title">Double Deluxe</div>
-                <div class="room-price"><span>ETB</span>799</div>
-            </div>
-            <div class="flex flex-ai-c">
-                <img src="assets/room3.jpeg" alt="">
-                <div class="room-title">Family Deluxe</div>
-                <div class="room-price"><span>ETB</span>899</div>
-            </div>
-            <div class="flex flex-ai-c">
-                <img src="assets/room5.jpeg" alt="">
-                <div class="room-title">Penthouse</div>
-                <div class="room-price"><span>ETB</span>1599</div>
+            <div class="rooms-bot grid">
+                <div class="flex flex-ai-c">
+                    <img src="assets/room5.jpeg" alt="">
+                    <div class="room-title">Penthouse</div>
+                    <div class="room-price"><span>ETB</span>1599</div>
+                </div>
+                <div class="flex flex-ai-c">
+                    <img src="assets/room5.jpeg" alt="">
+                    <div class="room-title">Penthouse</div>
+                    <div class="room-price"><span>ETB</span>1599</div>
+                </div>
+                <div class="flex flex-ai-c">
+                    <img src="assets/room5.jpeg" alt="">
+                    <div class="room-title">Penthouse</div>
+                    <div class="room-price"><span>ETB</span>1599</div>
+                </div>
             </div>
         </div>
     </section>

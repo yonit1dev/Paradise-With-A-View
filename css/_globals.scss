@@ -35,3 +35,28 @@ a, a:hover, a:visited{
         align-items: center;
     }
 }
+
+// Hide nav links for mobile display
+.hide-mobile{
+    @include breakpoints-down(medium){
+        display: none;
+    }
+}
+.hide-small{
+    @include breakpoints-down(x-small){
+        display: none;
+    }
+}
+
+// Hide toggle button for desktop display
+.hide-desktop{
+    @include breakpoints-up(large){
+        display: none;
+    }
+
+}
+
+// Lock scroll when dropdown menu is open
+.no-scroll{
+    overflow: hidden;
+}

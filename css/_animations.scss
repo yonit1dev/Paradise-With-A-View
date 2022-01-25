@@ -1,0 +1,58 @@
+// Horizontal Rule animation
+@keyframes hrWiden{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+// Fade-in animation for navbar
+@keyframes fade-in{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+// Helper class for fade-in animation
+.fade-in{
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+// Fade-out animation for navbar
+@keyframes fade-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+// Helper class for fade-out animation
+.fade-out{
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+
+@keyframes showup{
+    0% {opacity: 0;}
+    30%{opacity: 0.75;}
+    80%{opacity: 1;}
+    100%{opacity: 1;}
+}

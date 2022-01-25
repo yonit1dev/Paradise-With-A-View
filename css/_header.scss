@@ -1,19 +1,76 @@
-header{
+.header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/hero.jpeg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     margin-bottom: 5rem;
+
+    &.open{
+        .header-dropdown{
+
+            >span:first-child{
+                transform: rotate(45deg);
+            }
+        
+            >span:nth-child(2){
+                opacity: 0;
+            }
+        
+            >span:last-child{
+                transform: rotate(-45deg);
+            }
+    
+        }
+    }
+
+    &-dropdown{
+
+        @include breakpoints-down(small){
+            margin-right: 0;
+        }
+
+        > span{
+            margin-right: 1.5rem;
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: #101010;
+            transition: all 200ms ease-in-out;
+            transform-origin: 4px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 4px;
+            }
+        }
+
+    }
+
+    .overlay{
+        display: none;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-attachment: fixed;
+        background-image: linear-gradient(#101010, transparent);
+    }
 }
 hr{
     border: 0;
     border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
 }
 .navbar{
+
     padding: 1.75rem 3.5rem;
     font-family: 'Poppins';
 
+    #hamburger{
+        order: 3;
+    }
     #logo{
+        order: 0;
         > a{
             color: whitesmoke;
         }
@@ -24,21 +81,23 @@ hr{
     &-links{
         font-size: 0.9rem;
         > a{
+            margin: 0 2.5rem;
             color: whitesmoke;
             transition: all 300ms ease-in-out;
             &:hover{
                 color: $linkColor;
             }
-            &:not(:last-child){
-                margin: 0 2.5rem;
-            }
-            &:last-child{
-                font-size: 1rem;
-                color: $black;
-            }
         }
     }
     &-btn{
+        @include breakpoints-down(medium){
+            padding: 0.5rem 2rem;
+        }
+        @include breakpoints-down(small){
+            padding: 0.5rem 2.75rem;
+        }
+        order: 2;
+        color: #101010;
         padding: 0.5rem 1.25rem;
         border-radius: 25px;
         background-color: $mainColor;
@@ -85,35 +144,66 @@ hr{
     left: 50%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
-    label{
-        color: #a2a2a2;
-    }
-    input{
-        font-family: 'Raleway';
-        font-size: 0.75rem;
-        color: whitesmoke;
-        margin-top: 0.5rem;
-        display: block;
-        border: 0;
-        border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
-        background-color: inherit;
-    }
+
     > div{
         margin-right: 3rem;
     }
+    .grid{
+        @include breakpoints-down(medium){
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
+            #dates{
+                justify-content: space-around;
+            }
+        }
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .flex{
+            label{
+                color: #fff;
+            }
+            input{
+                font-family: 'Raleway';
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+                display: block;
+                border: 0;
+                border-bottom: 0.5px solid rgba(199, 199, 199, 0.5);
+                background-color: inherit;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .check-in{
+                margin-right: 2.5rem;
+            }
+            
+        }
+    }
     #adult{
+        margin-right: 2.5rem;
         padding: 0.5rem;
         border: 0.5px solid rgba(199, 199, 199, 0.5);
+        color: whitesmoke;
+        &::placeholder{
+            color: white;
+        }
     }
     #child{
+        margin-right: 2.5rem;
         padding: 0.5rem;
         border: 0.5px solid rgba(199, 199, 199, 0.5);
+        color: whitesmoke;
+        &::placeholder{
+            color: white;
+        }
     }
     .search-btn{
         > a{
             color: black;
             background-color: whitesmoke;
-            // padding: 0.5rem 1.25rem;
+            padding: 0.5rem 1.25rem;
             font-weight: 700;
             transition: all 300ms ease-in-out;
             &:hover{
@@ -124,33 +214,81 @@ hr{
 }
 
 .rooms{
+    @include breakpoints-down(medium){
+        .room-tiles{
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        } 
+    }
+    @include breakpoints-down(small){
+        .room-tiles{
+            .grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+    }
+    &-title{
+        margin: 0 auto 5rem auto;
+        width: 50%;
+        font-size: 2.75rem;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-align: center;
+
+        > p{
+            margin-top: 0.5rem;
+            color: #808080;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+
+        > hr{
+            width: 0;
+            border: 0;
+            border-bottom: 5px solid black;
+            margin: 2.5rem auto;
+            animation: hrWiden 2s ease-in-out forwards;
+        }
+
+    }
     &-tiles{
-        grid-template-columns: repeat(4, 1fr);
-        > .flex{
-            flex-direction: column;
-            transition: all 300ms ease-in-out;
-            > img{
-                height: 300px;
-                width: 300px;
-                margin-bottom: 1.5rem;
-            }
-            &:hover{
-                transform: scale(1.1);
-            }
-            .room-title{
-                margin-bottom: 0.5rem;
-                font-size: 1.25rem;
-                font-weight: 200;
-                letter-spacing: 1.2px;
-            }
-            .room-price{
-                font-weight: 700;
-                letter-spacing: 1.5px;
-                > span{
-                    margin-right: 0.25rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        .rooms-top{
+            margin-bottom: 3rem;
+        }
+        .grid{
+            grid-template-columns: repeat(3, 1fr);
+            > .flex{
+                flex-direction: column;
+                transition: all 300ms ease-in-out;
+                > img{
+                    height: 350px;
+                    width: 350px;
+                    margin-bottom: 1.5rem;
+                    border-radius: 10px;
                 }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .room-title{
+                    margin-bottom: 0.5rem;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                }
+                .room-price{
+                    font-weight: 200;
+                    letter-spacing: 1.5px;
+                    > span{
+                        margin-right: 0.25rem;
+                    }
+                }
+                
             }
-            
         }
     }
 }
