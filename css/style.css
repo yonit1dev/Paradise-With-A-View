@@ -342,6 +342,25 @@ hr {
   margin-bottom: 2.5rem;
 }
 
+@media (max-width: 63.9375em) {
+  .header-text .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .header-text .subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .header-text .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
 .header-text .title {
   font-family: 'Montserrat';
   font-size: 3.5rem;
@@ -351,11 +370,42 @@ hr {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 63.9375em) {
+  .header-text .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .header-text .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .header-text .title {
+    font-size: 2rem;
+    margin-bottom: 1.85rem;
+  }
+}
+
 .header-text .slogan {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 63.9375em) {
+  .header-text .slogan {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .header-text .slogan {
+    font-size: 0.75rem;
+  }
 }
 
 .header-booking {
@@ -524,13 +574,13 @@ hr {
   margin-bottom: 3rem;
 }
 
-.rooms-tiles .grid {
+.rooms-tiles > .grid {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 47.9375em) {
-  .rooms-tiles .grid {
+  .rooms-tiles > .grid {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     -ms-grid-rows: (1fr)[3];
@@ -538,7 +588,7 @@ hr {
   }
 }
 
-.rooms-tiles .grid > .flex {
+.rooms-tiles > .grid > .flex {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -547,31 +597,71 @@ hr {
   transition: all 300ms ease-in-out;
 }
 
-.rooms-tiles .grid > .flex > img {
+@media (max-width: 47.9375em) {
+  .rooms-tiles > .grid > .flex {
+    margin-bottom: 3rem;
+  }
+}
+
+.rooms-tiles > .grid > .flex > img {
   height: 350px;
   width: 350px;
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
 
-.rooms-tiles .grid > .flex:hover {
+@media (max-width: 79.9375em) {
+  .rooms-tiles > .grid > .flex > img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .rooms-tiles > .grid > .flex > img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: null) {
+  .rooms-tiles > .grid > .flex > img {
+    height: 220px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .rooms-tiles > .grid > .flex > img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.rooms-tiles > .grid > .flex:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.rooms-tiles .grid > .flex .room-title {
+.rooms-tiles > .grid > .flex .room-title {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1.2px;
 }
 
-.rooms-tiles .grid > .flex .room-price {
-  font-weight: 200;
+.rooms-tiles > .grid > .flex .room-price {
+  color: #09c0fa;
+  font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 1.5px;
 }
 
-.rooms-tiles .grid > .flex .room-price > span {
+.rooms-tiles > .grid > .flex .room-price > span:first-of-type {
   margin-right: 0.25rem;
+}
+
+.rooms-tiles > .grid > .flex .room-price > span:last-of-type {
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=style.css.map */
