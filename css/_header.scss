@@ -181,18 +181,38 @@ hr{
         @include breakpoints-down(medium){
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
             
             #dates{
                 justify-content: space-around;
             }
         }
+        @include breakpoints-down(small){
+            gap: 1rem;
+            margin-right: 0;
+        }
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         .flex{
+            @include breakpoints-up(small){
+                justify-content: space-between;
+                align-items: center;
+            }
+            @include breakpoints-down(x-small){
+                flex-direction: column;
+                justify-content: center;
+            }
             label{
+                @include breakpoints-down(x-small){
+                    margin-bottom: 0.85rem;
+                }
                 color: #fff;
             }
             input{
+                @include breakpoints-down(x-small){
+                    margin-top: 0.35rem;
+                    margin-bottom: 1.25rem;
+                }
                 font-family: 'Raleway';
                 font-size: 0.85rem;
                 margin-top: 0.5rem;
@@ -205,12 +225,18 @@ hr{
                 }
             }
             .check-in{
+                @include breakpoints-down(x-small){
+                    margin-right: 0;
+                }
                 margin-right: 2.5rem;
             }
             
         }
     }
     #adult{
+        @include breakpoints-down(x-small){
+            margin-right: 0;
+        }
         margin-right: 2.5rem;
         padding: 0.5rem;
         border: 0.5px solid rgba(199, 199, 199, 0.5);
@@ -220,6 +246,9 @@ hr{
         }
     }
     #child{
+        @include breakpoints-down(x-small){
+            margin-right: 0;
+        }
         margin-right: 2.5rem;
         padding: 0.5rem;
         border: 0.5px solid rgba(199, 199, 199, 0.5);
@@ -243,6 +272,13 @@ hr{
 }
 
 .rooms{
+    .cs-btn{
+        text-align: center;
+        @include breakpoints-down(small){
+            font-size: 1rem;
+        }
+    }
+    margin-bottom: 2rem;
     @include breakpoints-down(medium){
         .room-tiles{
             .grid{
@@ -259,6 +295,10 @@ hr{
         }
     }
     &-title{
+        @include breakpoints-down(medium){
+            font-size: 2.25rem;
+            width: 75%;
+        }
         margin: 0 auto 5rem auto;
         width: 50%;
         font-size: 2.75rem;
@@ -267,6 +307,9 @@ hr{
         text-align: center;
 
         > p{
+            @include breakpoints-down(medium){
+                font-size: 0.85rem;
+            }
             margin-top: 0.5rem;
             color: #808080;
             font-size: 1rem;
@@ -350,4 +393,186 @@ hr{
             }
         }
     }
+}
+
+.facilities{
+    padding: 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/royal.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    &-grid{
+        @include breakpoints-down(medium){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-title{
+        @include breakpoints-down(medium){
+            font-size: 2.25rem;
+        }
+        @include breakpoints-down(small){
+            font-size: 1.75rem;
+        }
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .facility{
+        @include breakpoints-down(medium){
+            text-align: center;
+        }
+        padding: 1.75rem;
+        &-title{
+            @include breakpoints-down(small){
+                font-size: 1.25rem;
+            }
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            > i{
+                margin-right: 1.25rem;
+            }
+
+        }
+        &-body{
+            @include breakpoints-down(small){
+                font-size: 0.75rem;
+                line-height: 1.3;
+            }
+            font-weight: 200;
+            color: #aaaaaa;
+            text-align: justify;
+        }
+    }
+}
+
+.excerpts{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 2.5rem 0.5rem 2.5rem 0.5rem;
+    &-title{
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        font-size: 2.25rem;
+        letter-spacing: 2px;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+        @include breakpoints-down(medium){
+            margin-bottom: 1.25rem;
+            font-size: 1.75rem;
+        }
+        @include breakpoints-down(small){
+            font-size: 1.25rem;
+        }
+    }
+    &-body{
+        margin: auto;
+        width: 90%;
+        color: #808080;
+        font-family: 'Raleway';
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        @include breakpoints-down(medium){
+            width: 85%;
+            font-size: 1.5rem;
+        }
+        @include breakpoints-down(small){
+            font-size: 0.85rem;
+        }
+
+        > i{
+            font-size: 1.75rem;
+            color: #101010;
+            padding: 0 1rem;
+            @include breakpoints-down(small){
+                font-size: 1.25rem;
+            }
+        }  
+    }
+    &-image{
+        .fa-chrome{
+            font-size: 1.75rem;
+            margin: 0.75rem 0;
+        }
+        figcaption{
+            @include breakpoints-down(small){
+                font-size: 0.75rem;
+            }
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2.5rem;
+        }
+    }
+    
+}
+
+#viewmore{
+    border-radius: 0;
+    font-size: 1.35rem;
+    margin: 4.5rem 0 4.5rem 0;
+    @include breakpoints-down(small){
+        font-size: 1rem;
+    }
+}
+
+.footer{
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #101010;
+    color: white;
+
+    // For desktop
+    @include breakpoints-up(medium){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+
+        .footer-socials{
+            font-size: 2.25rem;
+            margin-bottom: 0;
+        }
+        .footer-contact{
+            margin-bottom: 0;
+        }
+    }
+    &-contact{
+
+        > a{
+            color: #808080;
+            display: block;
+            margin-bottom: 1.25rem;
+        }
+        #footer-link{
+            color: whitesmoke;
+            font-family: 'Montserrat';
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 300ms ease-in-out;
+            
+            &:hover{
+                color: $linkColor;
+            }
+        }
+
+    }
+    &-socials{
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        > a {
+            color: whitesmoke;
+            &:not(:last-child){
+            margin-right: 1.25rem;
+            }
+        }
+    }
+}
+#footer-disclaimer{
+    color: #808080;
+    letter-spacing: 1px;
 }

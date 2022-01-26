@@ -60,3 +60,19 @@ a, a:hover, a:visited{
 .no-scroll{
     overflow: hidden;
 }
+
+.more-btn{
+    letter-spacing: 3px;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    transition: color 200ms ease-in-out;
+
+    > a{
+        color: #101010;
+        &:hover{
+            transition: color 300ms ease-in-out;
+            color: $linkColor;
+        }
+    }
+}
