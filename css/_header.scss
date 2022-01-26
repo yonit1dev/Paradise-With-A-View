@@ -167,6 +167,9 @@ hr{
 }
 
 .header-booking{
+    @include breakpoints-down(medium){
+        top: 74%;
+    }
     align-items: center;
     position: absolute;
     top: 80%;
@@ -205,6 +208,7 @@ hr{
             label{
                 @include breakpoints-down(x-small){
                     margin-bottom: 0.85rem;
+                    font-size: 0.85rem;
                 }
                 color: #fff;
             }

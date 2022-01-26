@@ -439,6 +439,12 @@ hr {
   color: whitesmoke;
 }
 
+@media (max-width: 63.9375em) {
+  .header-booking {
+    top: 74%;
+  }
+}
+
 .header-booking > div {
   margin-right: 3rem;
 }
@@ -500,6 +506,7 @@ hr {
 @media (max-width: 39.9375em) {
   .header-booking .grid .flex label {
     margin-bottom: 0.85rem;
+    font-size: 0.85rem;
   }
 }
 
