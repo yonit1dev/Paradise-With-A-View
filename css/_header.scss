@@ -204,6 +204,9 @@ hr{
     @include breakpoints-down(medium){
         top: 74%;
     }
+    @include breakpoints-down(small){
+        top: 80%;
+    }
     align-items: center;
     position: absolute;
     top: 80%;
