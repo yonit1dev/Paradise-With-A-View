@@ -144,6 +144,9 @@ hr{
 }
 
 .header-text{
+    @include breakpoints-down(small){
+        top: 20%;
+    }
     position: absolute;
     top: 30%;
     left: 50%;
